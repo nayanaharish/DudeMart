@@ -32,7 +32,7 @@ axios
 export function getProductsByCategories(category, setProducts)
 {
   
-  alert(category);
+  // alert(category);
 
   if(category === "all")
   {
@@ -44,7 +44,7 @@ export function getProductsByCategories(category, setProducts)
       const filteredProducts = allProducts.filter((product)=>
       product.category === category
       );
-      setProducts (filteredProducts);
+      setProducts(filteredProducts);
     });
   }
 

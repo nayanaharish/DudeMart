@@ -26,6 +26,15 @@
     font-size: 1.5rem;
     
 }
+
+.menu-bar ul a
+{
+    margin: 0 15px;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
 .menu-bar 
 {
     flex-grow:1;

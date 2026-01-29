@@ -4,15 +4,15 @@ import Categories from './Categories/Categories'
 import Data from './Data/Data.jsx'
 import { useState } from 'react';
 
-function Product() {
+
+function Product({products, setProducts ,category , setCategory}) {
 
    
-   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState("");
+  
   return (
     <div>
        <Hero /> 
-      <Categories  setProducts={setProducts} category={category} setCategory={setCategory}  />
+      <Categories products={products}  setProducts={setProducts} category={category} setCategory={setCategory}  />
       <Data  products={products} setProducts={setProducts}   />
     </div>
   )

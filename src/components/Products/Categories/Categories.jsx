@@ -7,7 +7,7 @@ import hero5 from "../../../assets/images/hero/hero5.jfif"
 import "./categories.css";
 import{getProductsByCategories} from "../../Products/Data/Data.js"
 
-function Categories({ setProducts,category,setCategory }) {
+function Categories({ products,setProducts,category,setCategory }) {
 
   const [activeCategory, setActiveCategory] = useState("all");
 

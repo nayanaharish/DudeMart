@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./Hero.css";
 
 import hero1 from "../../../assets/images/hero/hero1.jfif"
-import hero2 from "../../../assets/images/hero/hero5.jfif";
+import hero2 from "../../../assets/images/hero/hero2.jfif";
 import hero3 from "../../../assets/images/hero/hero3.jfif"
 import hero4 from "../../../assets/images/hero/hero4.jfif"
 import hero5 from "../../../assets/images/hero/hero5.jfif"
@@ -11,9 +11,9 @@ function Hero() {
     const headings = [
   "Shop Everything You Need",
   "Latest Electronic Gadgets",
-  "Trendy Women’s Clothing",
+  "Elegant Jewellery Collection",  
   "Stylish Men’s Fashion",
-  "Elegant Jewellery Collection"
+  "Trendy Women’s Clothing"  
 ];
 
     const descriptions = [
@@ -32,14 +32,14 @@ function Hero() {
     const [index,setIndex] = useState(0);
 
      useEffect(() => {
-    const interval = setInterval(() => {
+     setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
       console.log(index);
       
     }, 5000);
 
     
-  });
+  }, [index]);
    
   return (
     <div className='hero' style={{backgroundImage:`url(${images[index]})`}}>

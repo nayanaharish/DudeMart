@@ -29,7 +29,8 @@ function Data({ products, setProducts }) {
                 <p>$ {product.price}</p>
                 <h4>{product.category}</h4>
                 <div className='buttons'>
-                     <Link to="/product-details"><button >Product Details</button></Link>
+                  
+                     <Link to={`/product-details/${product.id}`}><button >Product Details</button></Link>
 
                     <button>Add to Cart</button>
                 </div>

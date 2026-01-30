@@ -22,7 +22,7 @@ function App() {
         <Route path="/product" element={<Product  products={products} setProducts={setProducts} category={category} setCategory={setCategory} />} />
         <Route path="/shop" element={<Shop/>} />
         <Route path="/contact" element={<Contact/>} />     
-        <Route path="/product-details" element={<ProductDetails/>} />
+        <Route path="/product-details/:id" element={<ProductDetails/>} />
         <Route path="/*" element={<h1>404 Not Found</h1>} /> 
       </Routes>
     </div>

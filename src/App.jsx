@@ -19,7 +19,7 @@ function App() {
       {/* <Product /> */}
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/product" element={<Product  products={products} setProducts={setProducts} category={category} setCategory={setCategory} />} />
+        <Route path="/products" element={<Product  products={products} setProducts={setProducts} category={category} setCategory={setCategory} />} />
         <Route path="/shop" element={<Shop/>} />
         <Route path="/contact" element={<Contact/>} />     
         <Route path="/product-details/:id" element={<ProductDetails/>} />

@@ -8,26 +8,33 @@
     box-shadow: 0 0 10px gray;
    
 }
+.image
+{
+    margin: auto 0px;
+}
 
 .image img
 {
     width: 250px;
     height: auto;
     margin-top: 30px;
+
 }
 
 .details
 {   
    display: grid;
-   grid-template-rows: 10% 10% 10% 50% 10%;
+   grid-template-rows: 15% 10% 10% 50% 10%;
+   gap: 20px;
 
 }
 
 .product-title
 {
     text-align: left;
-    padding: 15px 0px ;
+    padding: 10px 0px ;
     color: brown;
+    margin-bottom: 30px;
 
 }
 .product-rating
@@ -37,6 +44,7 @@
     gap:15px;
     color: orangered;
     padding: 15px 0px ;
+    padding: 10px 0px;
 }
 .product-price
 {

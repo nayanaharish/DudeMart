@@ -6,9 +6,7 @@ function Header()
        
             
         <div className="header">
-        <div>
-            <h1>Brand Name</h1>
-        </div>
+       
         <nav className="menu-bar">
             <ul>
                 <li><Link to="/" >Home</Link></li>

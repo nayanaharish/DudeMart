@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react'
 import  { getData } from "./Data.js"
 import "./Data.css"
 import { getProductsByCategories } from './Data.js'
+import { Link } from 'react-router-dom'
 function Data({ products, setProducts }) {
    
 
@@ -28,7 +29,8 @@ function Data({ products, setProducts }) {
                 <p>$ {product.price}</p>
                 <h4>{product.category}</h4>
                 <div className='buttons'>
-                     <button>Product Details</button>
+                     <Link to="/product-details"><button >Product Details</button></Link>
+
                     <button>Add to Cart</button>
                 </div>
                

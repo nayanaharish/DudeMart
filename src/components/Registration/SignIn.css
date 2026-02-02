@@ -1,0 +1,54 @@
+.SignInContainer
+{  
+    width: 300px;
+    border: 1px solid ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;    
+    color:rgb(6, 181, 240);
+    margin: 30px auto;
+    
+}
+.SignInContainer h1
+{
+    color: white;
+    background-color:rgb(6, 181, 240); ;
+}
+
+
+
+.form
+{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+label
+{
+    font-size: 1.2rem;
+}
+
+
+.input {
+  border: 1px solid rgb(6, 181, 240);
+}
+
+.input:focus {
+  border-color: rgb(6, 181, 240);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.2);
+}
+
+
+#signin
+{
+    padding: 8px 12px;
+    background-color:rgb(6, 181, 240) ;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 0px;
+}

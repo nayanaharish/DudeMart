@@ -1,0 +1,101 @@
+React Error Cheat-Sheet (with Code)
+1️⃣ Too many re-renders
+
+Cause: Calling setState during render
+
+❌ Wrong
+
+<button onClick={setCategory("electronics")}>Click</button>
+
+
+✅ Correct
+
+<button onClick={() => setCategory("electronics")}>Click</button>
+
+2️⃣ State not updating immediately
+
+Cause: useState updates are async
+
+❌ Wrong
+
+setCategory(cat);
+fetchProducts(category);
+
+
+✅ Correct
+
+useEffect(() => {
+  fetchProducts(category);
+}, [category]);
+
+3️⃣ setState is not a function
+
+Cause: Setter misused or passed incorrectly
+
+❌ Wrong (Data file)
+
+setProducts(data);
+
+
+✅ Correct
+
+getProducts().then(setProducts);
+
+4️⃣ Click works only on second time
+
+Cause: Using stale state value
+
+❌ Wrong
+
+setCategory(cat);
+loadData(category);
+
+
+✅ Correct
+
+loadData(cat);
+
+
+or
+
+useEffect(() => loadData(category), [category]);
+
+5️⃣ Axios Network Error
+
+Cause: Server / CORS / wrong URL
+
+❌ Wrong
+
+axios.get("/products");
+
+
+✅ Correct
+
+axios.get("http://localhost:5000/products");
+
+6️⃣ Dynamic styling not updating
+
+Cause: Class not derived from state
+
+❌ Wrong
+
+<div className="active">
+
+
+✅ Correct
+
+<div className={active === cat ? "active" : ""}>
+
+🔑 Final Interview Line
+
+“Most React bugs I faced were due to state timing, event handling, or side-effects, and I fixed them using useEffect, proper state lifting, and conditional rendering.”
+
+Use onSubmit + preventDefault() for forms
+
+Use useNavigate() for redirects after logic
+
+Use <Link> only for pure navigation
+
+Don’t rely on immediate state updates
+
+Keep state updates and navigation separate

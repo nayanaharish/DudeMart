@@ -1,7 +1,41 @@
+import SignIn from "../Registration/SignIn";
 import "./Header.css";
 import { Link } from "react-router-dom";
-function Header()
+function Header(props)
 {
+
+    var login ;
+
+    if(!props.login)
+    {
+        login = <Link 
+                    to="/SignIn"
+                    className="login-button"
+                    onClick={() => {
+                    console.log("Login clicked");
+                    // any extra logic here
+                    }}
+               >
+                 Login
+               </Link> ;
+    }
+    else
+    {
+        login = <Link 
+                    to="/"
+                    className="login-button"
+                    onClick={() => {
+                    console.log("Login clicked");
+                    
+                    props.setLogin(false);
+
+                    // any extra logic here
+                    }}
+               >
+                 Logout
+               </Link>
+    }
+
     return(
        
             
@@ -17,8 +51,11 @@ function Header()
             </ul>
         </nav>       
        
-            <button className="login-button"> Login
-            </button>        
+           <div>
+            
+               { login }
+           </div>
+ 
 
             
         </div>

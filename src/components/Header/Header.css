@@ -39,12 +39,13 @@
 {
     flex-grow:1;
 }
-.login-button
-{
-    padding: 10px 20px;
-    background-color: black;
-    border-radius: 5px;
-    border: rgb(44, 43, 43) 2px solid;
-    color: gainsboro;
-    cursor: pointer;
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  border-radius: 5px;
+  border: 2px solid rgb(44, 43, 43);
+  color: gainsboro;
+  text-decoration: none; /* IMPORTANT */
+  cursor: pointer;
 }

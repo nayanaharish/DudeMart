@@ -35,13 +35,13 @@ function SignIn({ login, setLogin }) {
       " className='form'>
 
         <div className='input-div'>
-            <label for="">Email:</label>
-            <input className = 'input' type="email" name="" id="name" style={{padding:"5px 12px"}} />
+          
+            <input className = 'input' type="email" name="" id="name" style={{padding:"5px 12px"}} placeholder='email' />
         </div>
 
         <div className='input-div'>
-            <label for="">Password:</label>
-            <input className='input' type="password" name="" id="password" style={{padding:"5px 12px"}} />
+            
+            <input className='input' type="password" name="" id="password" style={{padding:"5px 12px"}} placeholder='password' />
         </div>
 
         <button id='signin' onClick={

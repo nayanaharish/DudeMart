@@ -35,7 +35,20 @@ label
 
 .input {
   border: 1px solid rgb(6, 181, 240);
+    width: 100%;
 }
+.input::placeholder
+{
+    color: rgb(6, 181, 240);
+   opacity: 1;
+}
+
+.input-div
+{
+    width: 100%;
+}
+
+
 
 .input:focus {
   border-color: rgb(6, 181, 240);

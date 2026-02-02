@@ -1,7 +1,3 @@
-import React from 'react'
-import Hero from '../Products/Hero/Hero'
-import Categories from '../Products/Categories/Categories'
-import { useState } from 'react';
 import './home.css'
 import HomePage from "../../assets/images/Home/HomePage.jfif"
      

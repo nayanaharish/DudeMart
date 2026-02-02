@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import hero1 from "../../../assets/images/hero/hero1.jfif"
+import hero1 from "../../../assets/images/hero/hero1.jfif";
 import hero2 from "../../../assets/images/hero/hero2.jfif";
 import hero3 from "../../../assets/images/hero/hero3.jfif"
 import hero4 from "../../../assets/images/hero/hero4.jfif"

@@ -3,6 +3,7 @@ import Header from './components/Header/Header.jsx'
 import './App.css'
 import { useState } from 'react';
 import Container from './components/Container/Container.jsx'
+import LoginStatusContext from './pages/Registration/LoginStatusContext.jsx';
 
 
 function App() {
@@ -10,9 +11,13 @@ function App() {
   const [login,setLogin] = useState(false);
   return (
     <div className="App">
-      <Header login={login} setLogin = {setLogin}/>
+
+        <LoginStatusContext.Provider value={[{login,setLogin}]} >
+       <Header />
       {/* <Product /> */}
-     <Container login={login} setLogin = {setLogin} />
+     <Container />
+      </LoginStatusContext.Provider>
+     
     </div>
   )
 }

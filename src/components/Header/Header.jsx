@@ -1,16 +1,23 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
-function Header(props)
+import { useContext } from "react";
+import LoginStatusContext from "../../pages/Registration/LoginStatusContext";
+function Header()
 {
 
-    var login ;
+    const [{login,setLogin}]= useContext(LoginStatusContext);
 
-    if(!props.login)
+    console.log("value of login is ",login);
+    
+    var loginStatus ;
+
+    if(!login)
     {
-        login = <Link 
+        loginStatus = <Link 
                     to="/SignIn"
                     className="login-button"
                     onClick={() => {
+                       
                     console.log("Login clicked");
                     // any extra logic here
                     }}
@@ -20,13 +27,13 @@ function Header(props)
     }
     else
     {
-        login = <Link 
+        loginStatus = <Link 
                     to="/"
                     className="login-button"
                     onClick={() => {
-                    console.log("Login clicked");
+                    console.log("Logout clicked");
                     
-                    props.setLogin(false);
+                    setLogin(false);
 
                     // any extra logic here
                     }}
@@ -52,7 +59,7 @@ function Header(props)
        
            <div>
             
-               { login }
+               { loginStatus }
            </div>
  
 

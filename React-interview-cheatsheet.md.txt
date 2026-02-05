@@ -99,3 +99,7 @@ Use <Link> only for pure navigation
 Don’t rely on immediate state updates
 
 Keep state updates and navigation separate
+
+***** getting error and had to add e.preventDefault , but after making the type of button to button insted of submit..working
+“To avoid default form submission so I 
+can handle registration logic manually without preventing browser behavior.”

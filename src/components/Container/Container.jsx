@@ -7,6 +7,7 @@ import ProductDetails from "../../pages/ProductDetails/ProductDetails.jsx"
 import SignIn from "../../pages/Registration/SignIn.jsx"
 import { useState } from 'react';
 import { Routes , Route} from 'react-router-dom';
+import SignUp from '../../pages/Registration/SignUp.jsx';
 
 function Container(props) {
     const [products, setProducts] = useState([]);
@@ -21,6 +22,7 @@ function Container(props) {
         <Route path="/product-details/:id" element={<ProductDetails/>} />
         <Route path="/*" element={<h1>404 Not Found</h1>} /> 
         <Route path='/SignIn' element={< SignIn  setLogin={props.setLogin} login={props.login} />}/>
+        <Route path='/SignUp' element={<SignUp />}></Route>
       </Routes>
     </div>
   )
